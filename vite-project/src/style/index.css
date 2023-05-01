@@ -2,12 +2,16 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 :root {
   --orange: hsl(26, 100%, 55%);
   --White: hsl(0, 0%, 100%);
+  
 }
-
+.pointer {
+  cursor: pointer;
+}
 .flex {
   display: flex;
 }
@@ -50,7 +54,7 @@
   padding: 0px 5%;
 }
 .image-container {
-  flex-basis: 35%;
+  flex-basis: 40%;
   width: 100%;
   margin-block: 60px;
 }
@@ -78,8 +82,9 @@
   font-size: 18px;
   font-weight: 200;
   margin-left: auto;
-  margin-block: 60px;
-  flex-basis: 55%;
+  margin-block: 70px;
+  margin-right: 5%;
+  flex-basis: 40%;
   padding-block: 5%;
 }
 .cart-icon {
@@ -139,16 +144,54 @@
 .mini-cont {
   gap: 10px;
 }
+.productName {
+  font-size: 3rem;
+}
 .cart-product-name {
   font-weight: 400;
 }
 .description-section h2 {
   color: var(--orange);
-  font-size: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
-.inline-block {
-  display: inline-block;
+.add-btn, .sub-btn {
+cursor: pointer;
+padding: 10px 15px;
+background-color:  hsl(223, 64%, 98%);
+display: flex;
+height: 100%;
+align-items: center;
+justify-content: center;}
+.add-btn {
+  border-radius: 6px 0px 0px 6px;
+}
+.sub-btn {
+  border-radius: 0px 6px 6px 0px;
+
+}
+.item-num {
+font-weight: 700;
+background-color:  hsl(223, 64%, 98%);
+
+height: 100%;
+padding-top: 10px;
+
+font-size: 16px;
+
+}
+.item-cont {
+ 
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  border-radius:  6px;
+height: 40px;
+border-radius: 6px;
+width: 125px;
 }
 @media (max-width: 700px) {
 }

@@ -1,0 +1,18 @@
+/* kumbh-sans-font.css */
+
+/* Regular */
+@font-face {
+  font-family: 'Kumbh Sans';
+  src: url('./static/KumbhSans-Regular.ttf') format('ttf');
+       
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Kumbh Sans';
+  src: url('./static/KumbhSans-Black.ttf') format('tff');
+  font-weight: 700;
+  font-style: normal;
+}
