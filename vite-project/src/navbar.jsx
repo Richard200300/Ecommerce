@@ -18,11 +18,12 @@ function Navbar({ setData, data, items, setShowCart, showCart, setItems, togglem
     <nav className="navbar flex jcSb">
       <div className="flex atc nav-logo-cont">
         <div className="flex atc logo-container">
-          <img src="icon-menu.png" className="menu" />
+          <img src="icon-menu.png" className="menu" onClick={setToggleMenu(prevmenu => !prevmenu)}/>
           <img src="logo.png" />
         </div>
 
-        <div className="ul-container">
+            <li>Women</li>
+        <div className={`${togglemenu ? "ul-container" : ""}`}>
           <ul className="flex atc nav-ul">
             <li>Collections</li>
             <li>Men</li>
