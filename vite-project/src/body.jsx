@@ -6,7 +6,7 @@ function Body() {
   const [items, setItems] = useState(0);
   const [showCart, setShowCart] = useState(false);
   const [imgPop, setImgPop] = useState(false);
-  const [togglemenu, setToggleMenu] = useState(false)
+
 
   function handleimgPop() {
     setImgPop(true);
@@ -42,8 +42,7 @@ function Body() {
         setItems={setItems}
         showCart={showCart}
         setShowCart={setShowCart}
-        setToggleMenu={setToggleMenu}
-      togglemenu={togglemenu}
+   
       />
       <div className={`${imgPop ? "pop-up-container" : "active-pop-up"}`}>
         <section className="popup-container">
@@ -148,6 +147,7 @@ function Body() {
           </section>
         </section>
       </div>
+      
       <section className="flex main-cont">
         <section className="image-container">
           <section>
@@ -157,6 +157,41 @@ function Body() {
               onClick={handleimgPop}
             />
           </section>
+          <section className="mobile-img-cont">
+            <img
+              src={img[productImg]}
+              className="product-img1"
+            />
+               <div
+                className="pointer"
+                onClick={() => {
+                  productImg === 0
+                    ? setProductImg(0)
+                    : setProductImg(productImg - 1);
+                }}
+              >
+                <img
+                  src="icon-previous.png"
+                  alt="icon-previous"
+                  className="mobile-prev"
+                />
+              </div>
+              <div
+                className="pointer"
+                onClick={() => {
+                  productImg === img.length - 1
+                    ? setProductImg(productImg)
+                    : setProductImg(productImg + 1);
+                }}
+              >
+                <img
+                  src="icon-next.png"
+                  alt="icon-previous"
+                  className="mobile-next"
+                />
+              </div>
+          </section>
+          
 
           <section className="flex thumbnail-cont">
             <div
@@ -221,11 +256,13 @@ function Body() {
           <h1 className="productName">{data.productName}</h1>
 
           <p className="productDescription">{data.productDescription}</p>
+          <div className="all-price-cont">
           <div className="flex atc price-cont">
             <p className="current-price">${data.price}.00</p>
             <p className="percent-off">{data.percentOff}%</p>
           </div>
           <p className="former-price">${data.formerPrice}</p>
+          </div>
           <div className="flex atc item-flex-cont">
             <div className="flex item-cont">
               <div

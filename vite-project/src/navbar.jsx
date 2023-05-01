@@ -1,12 +1,12 @@
 import { React, useState } from "react";
 
-function Navbar({ setData, data, items, setShowCart, showCart, setItems, togglemenu, setToggleMenu}) {
+function Navbar({ setData, data, items, setShowCart, showCart, setItems }) {
   function handlecart() {
     setData({ ...data, total: items * data.price });
     setShowCart((prevcart) => !prevcart);
   }
 
-
+  const [togglemenu, setToggleMenu] = useState(false);
 
   const img = [
     "image-product-1.jpg",
@@ -14,17 +14,33 @@ function Navbar({ setData, data, items, setShowCart, showCart, setItems, togglem
     "image-product-3.jpg",
     "image-product-4.jpg",
   ];
+
   return (
     <nav className="navbar flex jcSb">
       <div className="flex atc nav-logo-cont">
         <div className="flex atc logo-container">
-          <img src="icon-menu.png" className="menu" onClick={setToggleMenu(prevmenu => !prevmenu)}/>
+          <img
+            src="icon-menu.png"
+            className="menu"
+            onClick={() => {
+              setToggleMenu(true);
+            }}
+          />
           <img src="logo.png" />
         </div>
 
-            <li>Women</li>
-        <div className={`${togglemenu ? "ul-container" : ""}`}>
+        <div
+          className={`${togglemenu ? "ul-container" : "ul-container-active"}`}
+        >
           <ul className="flex atc nav-ul">
+            <img
+              src="icon-close.png"
+              alt="icon-close.png"
+              className="hide-menu"
+              onClick={() => {
+                setToggleMenu(false);
+              }}
+            />
             <li>Collections</li>
             <li>Men</li>
             <li>Women</li>
