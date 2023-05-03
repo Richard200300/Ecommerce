@@ -21,12 +21,13 @@ function Navbar({ setData, data, items, setShowCart, showCart, setItems }) {
         <div className="flex atc logo-container">
           <img
             src="icon-menu.png"
+            alt='icon-menu.png'
             className="menu"
             onClick={() => {
               setToggleMenu(true);
             }}
           />
-          <img src="logo.png" />
+          <img src="logo.png" alt="logo.png"/>
         </div>
 
         <div
@@ -51,8 +52,8 @@ function Navbar({ setData, data, items, setShowCart, showCart, setItems }) {
       </div>
 
       <div className="flex atc">
-        <img src="icon-cart.png" onClick={handlecart} className="cart-icon" />
-        <img src="image-avatar.png" className="nav-dp-img" />
+        <img src="icon-cart.png" onClick={handlecart} className="cart-icon" alt='icon-cart.png'/>
+        <img src="image-avatar.png" className="nav-dp-img" alt="image-avatar.png"/>
       </div>
       {showCart && (
         <div className="hidden-cart">
@@ -60,7 +61,7 @@ function Navbar({ setData, data, items, setShowCart, showCart, setItems }) {
           {data.total ? (
             <div className="filled-cart">
               <div className="flex mini-cont atc">
-                <img src={img[0]} className="cart-img" />
+                <img src={img[0]} className="cart-img" alt={img[0]}/>
                 <div>
                   <p className="cart-product-name">{data.productName}</p>
                   <p>
@@ -72,6 +73,7 @@ function Navbar({ setData, data, items, setShowCart, showCart, setItems }) {
                 <img
                   className="pointer"
                   src="icon-delete.png"
+                  alt='icon-delete.png'
                   onClick={() => {
                     setData({ ...data, total: false });
                     setItems(0);

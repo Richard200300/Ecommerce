@@ -48,7 +48,7 @@ function Body() {
         <section className="popup-container">
           <section className="image-container">
             <section className="popimg-cont">
-              <img src={img[productImg]} className="popup-img" />
+              <img src={img[productImg]} className="popup-img" alt={img[productImg]}/>
               <div
                 className="pointer"
                 onClick={() => {
@@ -153,6 +153,7 @@ function Body() {
           <section>
             <img
               src={img[productImg]}
+              alt={img[productImg]}
               className="product-img"
               onClick={handleimgPop}
             />
@@ -160,6 +161,7 @@ function Body() {
           <section className="mobile-img-cont">
             <img
               src={img[productImg]}
+              alt={img[productImg]}
               className="product-img1"
             />
                <div
