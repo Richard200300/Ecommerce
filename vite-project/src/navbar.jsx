@@ -6,7 +6,7 @@ function Navbar({ setData, data, items, setShowCart, showCart, setItems }) {
     setShowCart((prevcart) => !prevcart);
   }
 
-  const [togglemenu, setToggleMenu] = useState(true);
+  const [togglemenu, setToggleMenu] = useState(false);
 
   const img = [
     "image-product-1.jpg",
