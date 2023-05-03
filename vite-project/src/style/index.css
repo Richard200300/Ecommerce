@@ -8,6 +8,7 @@
   --orange: hsl(26, 100%, 55%);
   --White: hsl(0, 0%, 100%);
 }
+
 .pointer {
   cursor: pointer;
 }
@@ -28,6 +29,7 @@
   padding: 30px 0px;
   position: fixed;
   width: 80%;
+  z-index: 2;
   background-color: white;
 
   border-bottom: 1px solid hsl(219, 9%, 45%);
@@ -149,6 +151,7 @@
 }
 .filled-cart {
   margin-top: 10px;
+  z-index: 2;
   padding: 10px 20px;
   color: hsl(219, 9%, 45%);
   font-weight: 200;
@@ -343,6 +346,7 @@
     position: fixed;
     top: 0px;
     height: 100%;
+    z-index: 5;
     width: 100%;
     left: 0px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -413,7 +417,8 @@ margin: 0px ;
 
 .mobile-img-cont {
   display: block;
-  display: relative;
+  position: relative;
+  z-index: 1;
   margin: 0px;
   padding: 0px;
 }
