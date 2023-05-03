@@ -372,7 +372,7 @@
 
   .hide-menu {
     position: absolute;
-    display: block;
+    display: block; 
     top:5vh;
     cursor: pointer;
 
