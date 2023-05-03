@@ -34,7 +34,7 @@ function Body() {
   }
 
   return (
-    <div className="body-section">
+    <section className="body-section">
       <Navbar
         data={data}
         setData={setData}
@@ -290,7 +290,7 @@ function Body() {
           </div>
         </section>
       </section>
-    </div>
+    </section>
   );
 }
 

@@ -6,9 +6,9 @@ import "./style/fonts/kumbh-sans-font.css"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <h1>
+    <main>
       <Body />
-    </h1>
+    </main>
   </React.StrictMode>
 );
 
